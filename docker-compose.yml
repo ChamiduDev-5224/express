@@ -4,6 +4,10 @@ services:
     container_name: express_app
     ports:
       - "5000:5000"
+    command: ['npm', 'run', 'start']
+    volumes:
+      - .:/app    
+      - /app/node_modules   
     env_file:
       - .env
     depends_on:

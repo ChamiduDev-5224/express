@@ -1,5 +1,5 @@
 # Use Node.js image
-FROM node:20
+FROM node:23
 
 WORKDIR /app
 
@@ -9,4 +9,5 @@ RUN npm install
 COPY . .
 
 EXPOSE 5000
-CMD ["node", "index.js"]
+CMD ["npm", "run", "start"]
+
